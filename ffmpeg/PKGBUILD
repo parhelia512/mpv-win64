@@ -34,12 +34,14 @@ makedepends=("amf-headers-dev"
              "libxvid-dev"
              "libzimg-dev"
              "libzvbi-dev"
+             "openal-soft-dev"
              "openssl-dev"
              "opus-dev"
              "shaderc-dev"
              "svtav1-dev"
              "uavs3d-dev"
-             "vapoursynth-dev")
+             "vapoursynth-dev"
+             "vvdec-dev")
 license=('LGPL')
 source=("git+https://github.com/FFmpeg/FFmpeg")
 md5sums=('SKIP')
@@ -48,7 +50,9 @@ package_ffmpeg-dev() {
   cd $srcdir/FFmpeg
   # fix checks for small buffers
   curl -OL https://patch-diff.githubusercontent.com/raw/eko5624/FFmpeg/pull/1.patch
+  curl -OL https://raw.githubusercontent.com/wiki/fraunhoferhhi/vvdec/data/patch/v6-0001-avcodec-add-external-dec-libvvdec-for-H266-VVC.patch
   patch -p1 -i 1.patch
+  patch -p1 -i v6-0001-avcodec-add-external-dec-libvvdec-for-H266-VVC.patch
   eval "${att_args}"
   ./configure \
     --prefix=/opt \
@@ -98,12 +102,17 @@ package_ffmpeg-dev() {
     --enable-libuavs3d \
     --enable-libvorbis \
     --enable-libvpx \
+    --enable-libvvdec \
     --enable-libwebp \
     --enable-libxml2 \
     --enable-libxvid \
     --enable-libzimg \
     --enable-libzvbi \
+    --enable-openal \
+    --enable-opengl \
     --enable-openssl \
+    --enable-nvdec \
+    --enable-nvenc \
     --enable-vaapi \
     --enable-vapoursynth \
     --enable-zlib \
