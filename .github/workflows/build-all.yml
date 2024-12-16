@@ -257,7 +257,7 @@ jobs:
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libaribcaption-dev-1.1.1-1-x86_64.pkg.tar.zst                
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libbs2b-dev-3.1.0-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libdovi-dev-3.3.1-1-x86_64.pkg.tar.zst
-        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.17-1-x86_64.pkg.tar.zst
+        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.18-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libjpeg-dev-3.1.0-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libjxl-dev-0.11.1-1-x86_64.pkg.tar.zst                
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libmodplug-dev-0.8.9.0-1-x86_64.pkg.tar.zst
@@ -672,7 +672,7 @@ jobs:
       run: |
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/bzip2-dev-1.0.8-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/expat-dev-2_6_4-1-x86_64.pkg.tar.zst
-        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.17-1-x86_64.pkg.tar.zst
+        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.18-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libxml2-dev-2.13.5-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/lzo-dev-2.10-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/openssl-dev-3.4.0-1-x86_64.pkg.tar.zst
@@ -1706,7 +1706,7 @@ jobs:
         key: ${{ inputs.compiler }}-ucrt-x86_64
     - name: Build
       run: |
-        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.17-1-x86_64.pkg.tar.zst
+        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.18-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/xz-dev-5.6.3-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/zlib-dev-2.2.2-1-x86_64.pkg.tar.zst        
         pacman -U *.zst --noconfirm
@@ -1795,7 +1795,7 @@ jobs:
         key: ${{ inputs.compiler }}-ucrt-x86_64
     - name: Build
       run: |
-        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.17-1-x86_64.pkg.tar.zst
+        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.18-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libpng-dev-1.6.44-1-x86_64.pkg.tar.zst        
         pacman -Sy gettext-devel --noconfirm
         pacman -U *.zst --noconfirm
@@ -1934,7 +1934,7 @@ jobs:
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libdvdcss-dev-1.4.3-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libdvdnav-dev-6.1.1-1-x86_64.pkg.tar.zst        
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libdvdread-dev-6.1.3-1-x86_64.pkg.tar.zst        
-        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.17-1-x86_64.pkg.tar.zst
+        curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libiconv-dev-1.18-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libjpeg-dev-3.1.0-1-x86_64.pkg.tar.zst
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libjxl-dev-0.11.1-1-x86_64.pkg.tar.zst                
         curl -OL https://github.com/${{ github.repository }}/releases/download/dev/libmodplug-dev-0.8.9.0-1-x86_64.pkg.tar.zst
